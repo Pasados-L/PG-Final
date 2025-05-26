@@ -7,7 +7,7 @@
 
 **Specifications:**
 - First person 3D enviroment
-- Simple Ui
+- Simple UI
 - SFX & Soundtrack
 - Enviroment interactions
 
