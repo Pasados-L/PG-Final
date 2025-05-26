@@ -7,12 +7,7 @@
 #include <assimp/postprocess.h>
 
 int main() {
-    // Inicializar GLFW
-    if (!glfwInit()) {
-        std::cerr << "Error al inicializar GLFW\n";
-        return -1;
-    }
-
+    
     // Crear ventana GLFW
     GLFWwindow* window = glfwCreateWindow(640, 480, "Test Librerías", nullptr, nullptr);
     if (!window) {
