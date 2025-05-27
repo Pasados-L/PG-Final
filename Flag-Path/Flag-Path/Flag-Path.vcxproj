@@ -133,7 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\First.cpp" />
+    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\glad.c" />
   </ItemGroup>
   <ItemGroup>
