@@ -3,6 +3,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
+#include <FMOD/fmod.hpp>
+#include <FMOD/fmod_errors.h>
 #include "Shader.h"
 #include "Model.h"
 #include "Camera.h"
@@ -140,6 +142,20 @@ int main() {
 
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+    // Inicialización de FMOD
+    FMOD::System* fmodSystem = nullptr;
+    FMOD::Sound* backgroundSound = nullptr;
+    FMOD::Channel* channel = nullptr;
+
+    FMOD::System_Create(&fmodSystem);
+    fmodSystem->init(512, FMOD_INIT_NORMAL, nullptr);
+
+    // Carga el sonido (asegúrate de que la ruta y el archivo existan)
+    fmodSystem->createSound("res/prueba.mp3", FMOD_LOOP_NORMAL | FMOD_2D, nullptr, &backgroundSound);
+
+    // Reproduce el sonido en loop
+    fmodSystem->playSound(backgroundSound, nullptr, false, &channel);
     
     // Skybox setup
     unsigned int skyboxVAO, skyboxVBO;
@@ -182,6 +198,8 @@ int main() {
 
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        fmodSystem->update();
 
         
         glDepthFunc(GL_LEQUAL);

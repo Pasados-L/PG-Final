@@ -170,6 +170,9 @@
     <Image Include="res\Textures\Skybox\right.jpg" />
     <Image Include="res\Textures\Skybox\top.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\prueba.mp3" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
