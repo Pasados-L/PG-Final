@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PublicIncludeDirectories>C:\Users\DELL 5590\source\repos\PG-Final\Flag-Path\Dependencies\Include\freetype-2.13.3;C:\Users\DELL 5590\source\repos\PG-Final\Flag-Path\Dependencies\Include\freetype-2.13.3\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PublicIncludeDirectories>C:\Users\DELL 5590\source\repos\PG-Final\Flag-Path\Dependencies\Include\freetype-2.13.3;C:\Users\DELL 5590\source\repos\PG-Final\Flag-Path\Dependencies\Include\freetype-2.13.3\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -135,12 +141,20 @@
   <ItemGroup>
     <ClCompile Include="src\First.cpp" />
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\Shader.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\DELL 5590\source\repos\PG-Final\Flag-Path\Flag-Path\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\DELL 5590\source\repos\PG-Final\Flag-Path\Flag-Path\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Dependencies\Include\freetype-2.13.3\include\ft2build.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="vendor\glad\glad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assimp-vc143-mtd.dll" />
+    <None Include="menu_fragment.glsl" />
+    <None Include="menu_vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
