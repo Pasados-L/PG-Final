@@ -33,6 +33,12 @@
     <ClCompile Include="src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\First.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vendor\glad\glad.h">
@@ -56,6 +62,12 @@
     <ClInclude Include="src\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\stb_easy_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ShaderMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="assimp-vc143-mtd.dll" />
@@ -67,6 +79,9 @@
     <None Include="res\Shaders\shader.fg" />
     <None Include="res\Shaders\skybox.fs" />
     <None Include="res\Shaders\skybox.vs" />
+    <None Include="menu_fragment.glsl" />
+    <None Include="menu_vertex.glsl" />
+    <None Include="MenuPrincipal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png">

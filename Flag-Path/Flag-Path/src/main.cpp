@@ -124,7 +124,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 
 
 
-int main() {
+int program() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
