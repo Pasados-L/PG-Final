@@ -65,6 +65,8 @@
     <None Include="res\Models\Exhibition\scene.gltf" />
     <None Include="res\Shaders\shader.vs" />
     <None Include="res\Shaders\shader.fg" />
+    <None Include="res\Shaders\skybox.fs" />
+    <None Include="res\Shaders\skybox.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png">
@@ -74,6 +76,24 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\Models\Exhibition\textures\Material.006_baseColor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Textures\Skybox\back.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Textures\Skybox\bottom.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Textures\Skybox\front.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Textures\Skybox\left.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Textures\Skybox\right.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Textures\Skybox\top.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

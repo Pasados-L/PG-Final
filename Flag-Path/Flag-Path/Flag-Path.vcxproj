@@ -155,11 +155,19 @@
     <None Include="res\Models\Exhibition\scene.gltf" />
     <None Include="res\Shaders\shader.fg" />
     <None Include="res\Shaders\shader.vs" />
+    <None Include="res\Shaders\skybox.fs" />
+    <None Include="res\Shaders\skybox.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png" />
     <Image Include="res\Models\Exhibition\textures\Material.004_baseColor.png" />
     <Image Include="res\Models\Exhibition\textures\Material.006_baseColor.png" />
+    <Image Include="res\Textures\Skybox\back.jpg" />
+    <Image Include="res\Textures\Skybox\bottom.jpg" />
+    <Image Include="res\Textures\Skybox\front.jpg" />
+    <Image Include="res\Textures\Skybox\left.jpg" />
+    <Image Include="res\Textures\Skybox\right.jpg" />
+    <Image Include="res\Textures\Skybox\top.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
