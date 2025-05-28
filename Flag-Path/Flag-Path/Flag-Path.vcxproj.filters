@@ -68,6 +68,10 @@
     <None Include="res\Shaders\skybox.fs" />
     <None Include="res\Shaders\skybox.vs" />
     <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
+    <None Include="fmod.dll" />
+    <None Include="fmodL.dll" />
+    <None Include="fmodstudio.dll" />
+    <None Include="fmodstudioL.dll" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png">

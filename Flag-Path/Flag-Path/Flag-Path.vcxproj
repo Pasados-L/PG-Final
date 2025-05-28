@@ -151,6 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assimp-vc143-mtd.dll" />
+    <None Include="fmod.dll" />
+    <None Include="fmodL.dll" />
+    <None Include="fmodstudio.dll" />
+    <None Include="fmodstudioL.dll" />
     <None Include="res\Models\Exhibition\scene.bin" />
     <None Include="res\Models\Exhibition\scene.gltf" />
     <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
