@@ -79,9 +79,6 @@
     <None Include="res\Shaders\shader.fg" />
     <None Include="res\Shaders\skybox.fs" />
     <None Include="res\Shaders\skybox.vs" />
-    <None Include="menu_fragment.glsl" />
-    <None Include="menu_vertex.glsl" />
-    <None Include="MenuPrincipal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png">
@@ -111,5 +108,8 @@
     <Image Include="res\Textures\Skybox\top.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\prueba.mp3" />
   </ItemGroup>
 </Project>

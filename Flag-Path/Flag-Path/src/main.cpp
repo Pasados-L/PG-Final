@@ -3,6 +3,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
+#include <FMOD/fmod.hpp>
+#include <FMOD/fmod_errors.h>
 #include "Shader.h"
 #include "Model.h"
 #include "Camera.h"
@@ -122,6 +124,9 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 
 
 
+
+
+
 int main() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -136,6 +141,20 @@ int main() {
 
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+    // Inicialización de FMOD
+    FMOD::System* fmodSystem = nullptr;
+    FMOD::Sound* backgroundSound = nullptr;
+    FMOD::Channel* channel = nullptr;
+
+    FMOD::System_Create(&fmodSystem);
+    fmodSystem->init(512, FMOD_INIT_NORMAL, nullptr);
+
+    // Carga el sonido (asegúrate de que la ruta y el archivo existan)
+    fmodSystem->createSound("res/prueba.mp3", FMOD_LOOP_NORMAL | FMOD_2D, nullptr, &backgroundSound);
+
+    // Reproduce el sonido en loop
+    fmodSystem->playSound(backgroundSound, nullptr, false, &channel);
     
     // Skybox setup
     unsigned int skyboxVAO, skyboxVBO;
@@ -165,6 +184,7 @@ int main() {
 
     Shader shader("res/Shaders/shader.vs", "res/Shaders/shader.fg");
     Model model("res/Models/Exhibition/scene.gltf");
+    Model model2("res/Models/vivr/survivalrio_unity_mat.fbx");
 
     float lastFrame = 0.0f;
 
@@ -177,6 +197,8 @@ int main() {
 
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        fmodSystem->update();
 
         
         glDepthFunc(GL_LEQUAL);
@@ -221,6 +243,10 @@ int main() {
 
         model.Draw(shader, modelMat);
 
+        glm::mat4 modelMat2 = glm::mat4(1.0f);
+        modelMat2 = glm::translate(modelMat2, glm::vec3(5.0f, 0.0f, 0.0f));
+        shader.setMat4("model", modelMat2);
+        model2.Draw(shader, modelMat2);
        
 
 
