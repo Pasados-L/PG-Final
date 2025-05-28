@@ -14,9 +14,7 @@ bool firstMouse = true;
 Camera camera(glm::vec3(0.0f, 1.0f, 3.0f));
 
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
-}
+
 
 void processInput(GLFWwindow* window, Camera& camera, float deltaTime) {
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
@@ -133,7 +131,7 @@ int program() {
     GLFWwindow* window = glfwCreateWindow(800, 600, "En este estado carga modelos.", NULL, NULL);
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    
 
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);

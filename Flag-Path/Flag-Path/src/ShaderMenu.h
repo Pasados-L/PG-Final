@@ -1,14 +1,14 @@
-#ifndef SHADER_H
-#define SHADER_H
+#ifndef SHADER_MENU_H
+#define SHADER_MENU_H
 
 #include <string>
 #include <glad/glad.h>
 
-class Shader {
+class ShaderMenu {
 public:
     unsigned int ID;
 
-    Shader(const char* vertexPath, const char* fragmentPath);
+    ShaderMenu(const char* vertexPath, const char* fragmentPath);
     void use();
 
     void setBool(const std::string& name, bool value) const;
