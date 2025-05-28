@@ -35,6 +35,8 @@ void drawTextModern(const char* text, float x, float y) {
     glBindVertexArray(0);
 }
 
+extern int program();
+
 int main() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -117,20 +119,31 @@ int main() {
         for (int i = 0; i < 4; i++) {
             glBindVertexArray(buttonsData[i].VAO);
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        }
 
-        if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
-            for (int i = 0; i < 4; i++) {
-                if (xNDC >= buttonsData[i].xMin && xNDC <= buttonsData[i].xMax &&
-                    yNDC >= buttonsData[i].yMin && yNDC <= buttonsData[i].yMax) {
-                    switch (i) {
-                    case 0: std::cout << "Jugar\n"; break;
-                    case 1: std::cout << "Opciones\n"; break;
-                    case 2: std::cout << "Creditos\n"; break;
-                    case 3: std::cout << "Salir\n"; break;
+            if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
+                for (int i = 0; i < 4; i++) {
+                    if (xNDC >= buttonsData[i].xMin && xNDC <= buttonsData[i].xMax &&
+                        yNDC >= buttonsData[i].yMin && yNDC <= buttonsData[i].yMax) {
+                        switch (i) {
+                        case 0:
+                            std::cout << "Jugar\n";
+                            program(); // LLAMADA A LA FUNCIÓN EXTERNA
+                            break;
+                        case 1:
+                            std::cout << "Opciones\n";
+                            break;
+                        case 2:
+                            std::cout << "Créditos\n";
+                            break;
+                        case 3:
+                            std::cout << "Salir\n";
+                            glfwSetWindowShouldClose(window, true);
+                            break;
+                        }
                     }
                 }
             }
+
         }
 
         // Preparar proyección ortográfica para texto
