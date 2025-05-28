@@ -153,6 +153,7 @@
     <None Include="assimp-vc143-mtd.dll" />
     <None Include="res\Models\Exhibition\scene.bin" />
     <None Include="res\Models\Exhibition\scene.gltf" />
+    <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
     <None Include="res\Shaders\shader.fg" />
     <None Include="res\Shaders\shader.vs" />
     <None Include="res\Shaders\skybox.fs" />

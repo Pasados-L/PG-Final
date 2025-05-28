@@ -124,6 +124,9 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 
 
 
+
+
+
 int main() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -166,6 +169,7 @@ int main() {
 
     Shader shader("res/Shaders/shader.vs", "res/Shaders/shader.fg");
     Model model("res/Models/Exhibition/scene.gltf");
+    Model model2("res/Models/vivr/survivalrio_unity_mat.fbx");
 
     float lastFrame = 0.0f;
 
@@ -222,6 +226,10 @@ int main() {
 
         model.Draw(shader, modelMat);
 
+        glm::mat4 modelMat2 = glm::mat4(1.0f);
+        modelMat2 = glm::translate(modelMat2, glm::vec3(5.0f, 0.0f, 0.0f));
+        shader.setMat4("model", modelMat2);
+        model2.Draw(shader, modelMat2);
        
 
 
