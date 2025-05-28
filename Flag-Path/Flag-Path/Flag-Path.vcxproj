@@ -134,10 +134,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\First.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,16 +147,14 @@
     <ClInclude Include="src\Mesh.h" />
     <ClInclude Include="src\Model.h" />
     <ClInclude Include="src\Shader.h" />
+    <ClInclude Include="src\ShaderMenu.h" />
+    <ClInclude Include="src\stb_easy_font.h" />
     <ClInclude Include="src\stb_image.h" />
     <ClInclude Include="src\Texture.h" />
     <ClInclude Include="vendor\glad\glad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assimp-vc143-mtd.dll" />
-    <None Include="fmod.dll" />
-    <None Include="fmodL.dll" />
-    <None Include="fmodstudio.dll" />
-    <None Include="fmodstudioL.dll" />
     <None Include="res\Models\Exhibition\scene.bin" />
     <None Include="res\Models\Exhibition\scene.gltf" />
     <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
