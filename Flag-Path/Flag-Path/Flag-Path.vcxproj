@@ -133,14 +133,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\First.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\Mesh.cpp" />
+    <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Mesh.h" />
+    <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\Shader.h" />
+    <ClInclude Include="src\stb_image.h" />
+    <ClInclude Include="src\Texture.h" />
     <ClInclude Include="vendor\glad\glad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assimp-vc143-mtd.dll" />
+    <None Include="res\Models\Exhibition\scene.bin" />
+    <None Include="res\Models\Exhibition\scene.gltf" />
+    <None Include="res\Shaders\shader.fg" />
+    <None Include="res\Shaders\shader.vs" />
+    <None Include="res\Shaders\skybox.fs" />
+    <None Include="res\Shaders\skybox.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png" />
+    <Image Include="res\Models\Exhibition\textures\Material.004_baseColor.png" />
+    <Image Include="res\Models\Exhibition\textures\Material.006_baseColor.png" />
+    <Image Include="res\Textures\Skybox\back.jpg" />
+    <Image Include="res\Textures\Skybox\bottom.jpg" />
+    <Image Include="res\Textures\Skybox\front.jpg" />
+    <Image Include="res\Textures\Skybox\left.jpg" />
+    <Image Include="res\Textures\Skybox\right.jpg" />
+    <Image Include="res\Textures\Skybox\top.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
