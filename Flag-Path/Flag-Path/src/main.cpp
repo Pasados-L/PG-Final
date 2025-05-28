@@ -122,13 +122,14 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
 
 
 
-int program() {
+int main() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "En este estado carga modelos.", NULL, NULL);
+   //GLFWwindow* window = glfwCreateWindow(1920, 1100, "tamaño de ventana para PC de alvaro.", NULL, NULL);
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     
