@@ -39,6 +39,9 @@
     <ClCompile Include="src\First.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ejemplo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vendor\glad\glad.h">

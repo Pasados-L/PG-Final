@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ejemplo.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\First.cpp" />
     <ClCompile Include="src\main.cpp" />
