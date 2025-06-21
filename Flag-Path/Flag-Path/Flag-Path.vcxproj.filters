@@ -67,6 +67,7 @@
     <None Include="res\Shaders\shader.fg" />
     <None Include="res\Shaders\skybox.fs" />
     <None Include="res\Shaders\skybox.vs" />
+    <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png">

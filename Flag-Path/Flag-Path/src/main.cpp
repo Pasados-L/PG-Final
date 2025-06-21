@@ -7,6 +7,8 @@
 #include "Model.h"
 #include "Camera.h"
 #include "stb_image.h"
+
+
 #define STB_IMAGE_IMPLEMENTATION
 
 float lastX = 400, lastY = 300;
@@ -168,12 +170,20 @@ int main() {
     glEnable(GL_DEPTH_TEST);
 
     Shader shader("res/Shaders/shader.vs", "res/Shaders/shader.fg");
-    Model model("res/Models/Exhibition/scene.gltf");
-    Model model2("res/Models/vivr/survivalrio_unity_mat.fbx");
-
+ 
     float lastFrame = 0.0f;
+    // Antes del while, crea el Animator junto con el modelo animado
+    Model model("res/Models/PG/PG.gltf");
+    if (!model.scene) {
+        std::cerr << "ERROR: No se pudo cargar el modelo GLB." << std::endl;
+        return -1; // o salir del programa
+    }
+  
+    // Modelo sin animación
 
+   
     while (!glfwWindowShouldClose(window)) {
+   
         float currentFrame = glfwGetTime();
         float deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
@@ -183,59 +193,32 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        
-        glDepthFunc(GL_LEQUAL);
-        skyboxShader.use();
-        glm::mat4 skyboxView = glm::mat4(glm::mat3(camera.GetViewMatrix()));
-        glm::mat4 skyboxProjection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
-        skyboxShader.setMat4("view", skyboxView);
-        skyboxShader.setMat4("projection", skyboxProjection);
-        glBindVertexArray(skyboxVAO);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
-        skyboxShader.setInt("skybox", 0);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-        glDepthFunc(GL_LESS);
+        // Render skybox...
 
-        // Posición del sol en el mundo (ajusta según tu escena)
-        glm::vec3 sunWorldPos = glm::vec3(10.0f, 20.0f, -10.0f);
-
-        // Calcula el modelo para el quad (escalado y posición)
-        glm::mat4 sunModel = glm::mat4(1.0f);
-        sunModel = glm::translate(sunModel, sunWorldPos);
-        sunModel = glm::scale(sunModel, glm::vec3(3.0f)); // tamaño del sol
-
-
-        glm::mat4 view = camera.GetViewMatrix();
-        glm::mat4 projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
-
-
-
-       
-
+        // --- Aquí calculamos pesos morph ---
+        float morphWeight1 = (sin(currentFrame) + 1.0f) / 2.0f;
+        float morphWeight2 = (cos(currentFrame) + 1.0f) / 2.0f;
 
         shader.use();
+        shader.setMat4("view", camera.GetViewMatrix());
+        shader.setMat4("projection", glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f));
+        shader.setFloat("morphWeight1", morphWeight1);
+        shader.setFloat("morphWeight2", morphWeight2);
 
         glm::mat4 modelMat = glm::mat4(1.0f);
         modelMat = glm::scale(modelMat, glm::vec3(0.1f));
         modelMat = glm::rotate(modelMat, glm::radians(-90.0f), glm::vec3(1, 0, 0));
+        shader.setMat4("model", modelMat);
        
-        shader.setMat4("view", view);
-        shader.setMat4("projection", projection);
-
         model.Draw(shader, modelMat);
 
-        glm::mat4 modelMat2 = glm::mat4(1.0f);
-        modelMat2 = glm::translate(modelMat2, glm::vec3(5.0f, 0.0f, 0.0f));
-        shader.setMat4("model", modelMat2);
-        model2.Draw(shader, modelMat2);
-       
-
+        // Dibujar modelo sin animación igual
 
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+
+
 
 
     glfwTerminate();

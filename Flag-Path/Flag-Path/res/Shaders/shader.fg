@@ -10,7 +10,6 @@ uniform sampler2D texture_normal1;
 void main()
 {
     vec3 diffuse = texture(texture_diffuse1, TexCoords).rgb;
-    vec3 specular = texture(texture_specular1, TexCoords).rgb;
-    // For now, just show diffuse
+    // Puedes ampliar aquí con specular o normal maps si quieres
     FragColor = vec4(diffuse, 1.0);
 }
