@@ -20,6 +20,6 @@ public:
     float Speed;
     float MouseSensitivity;
 
-private:
+
     void updateCameraVectors();
 };

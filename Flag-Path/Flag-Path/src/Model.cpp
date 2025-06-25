@@ -14,6 +14,30 @@ void Model::Draw(Shader& shader, const glm::mat4& modelMatrix) {
         mesh.Draw(shader, modelMatrix);
     }
 }
+std::vector<std::pair<glm::vec3, glm::vec3>> Model::GetAllAABBs() const {
+    std::vector<std::pair<glm::vec3, glm::vec3>> boxes;
+    for (const auto& mesh : meshes) {
+        boxes.push_back({ mesh.aabbMin, mesh.aabbMax });
+    }
+    return boxes;
+}
+std::pair<glm::vec3, glm::vec3> Model::GetGlobalAABB() {
+    glm::vec3 min, max;
+    // Esto depende de cómo almacenes las AABBs
+    bool first = true;
+    for (const auto& box : GetAllAABBs()) {
+        if (first) {
+            min = box.first;
+            max = box.second;
+            first = false;
+        }
+        else {
+            min = glm::min(min, box.first);
+            max = glm::max(max, box.second);
+        }
+    }
+    return { min, max };
+}
 
 void Model::loadModel(std::string path) {
     Assimp::Importer importer;

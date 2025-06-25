@@ -14,19 +14,21 @@ glm::mat4 Camera::GetViewMatrix() const {
 
 void Camera::ProcessKeyboard(int key, float deltaTime) {
     float velocity = Speed * deltaTime;
+
+    // Movimiento como en FPS: en el plano XZ, según la dirección de vista (Front)
+    glm::vec3 flatFront = glm::normalize(glm::vec3(Front.x, 0.0f, Front.z));
+    glm::vec3 flatRight = glm::normalize(glm::vec3(Right.x, 0.0f, Right.z));
+
     if (key == GLFW_KEY_W)
-        Position += Front * velocity;
+        Position += flatFront * velocity;
     if (key == GLFW_KEY_S)
-        Position -= Front * velocity;
+        Position -= flatFront * velocity;
     if (key == GLFW_KEY_A)
-        Position -= Right * velocity;
+        Position -= flatRight * velocity;
     if (key == GLFW_KEY_D)
-        Position += Right * velocity;
-    if (key == GLFW_KEY_SPACE)
-        Position += WorldUp * velocity;
-    if (key == GLFW_KEY_LEFT_CONTROL)
-        Position -= WorldUp * velocity;
+        Position += flatRight * velocity;
 }
+
 
 void Camera::ProcessMouseMovement(float xoffset, float yoffset) {
     xoffset *= MouseSensitivity;
@@ -52,3 +54,5 @@ void Camera::updateCameraVectors() {
     Right = glm::normalize(glm::cross(Front, WorldUp));
     Up = glm::normalize(glm::cross(Right, Front));
 }
+
+

@@ -3,6 +3,15 @@
 Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures, glm::mat4 transform)
     : vertices(vertices), indices(indices), textures(textures), transform(transform) {
     setupMesh();
+    // Inicializa AABB con extremos opuestos
+    aabbMin = glm::vec3(FLT_MAX);
+    aabbMax = glm::vec3(-FLT_MAX);
+
+    for (const auto& vertex : vertices) {
+        aabbMin = glm::min(aabbMin, vertex.Position);
+        aabbMax = glm::max(aabbMax, vertex.Position);
+    }
+
 }
 
 void Mesh::setupMesh() {
