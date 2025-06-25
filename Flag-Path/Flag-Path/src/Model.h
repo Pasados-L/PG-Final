@@ -14,6 +14,8 @@ public:
 
     Model(const std::string& path);
     void Draw(Shader& shader, const glm::mat4& modelMatrix);
+    std::vector<std::pair<glm::vec3, glm::vec3>> GetAllAABBs() const;
+    std::pair<glm::vec3, glm::vec3> GetGlobalAABB();
 
 private:
     std::vector<Texture> textures_loaded;
