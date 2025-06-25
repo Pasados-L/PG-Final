@@ -3,12 +3,11 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
-#include <FMOD/fmod.hpp>
-#include <FMOD/fmod_errors.h>
 #include "Shader.h"
 #include "Model.h"
 #include "Camera.h"
 #include "stb_image.h"
+<<<<<<< HEAD
 #define STB_IMAGE_IMPLEMENTATION
 #include <cfloat> 
 #include "CollisionBox.h"
@@ -17,6 +16,11 @@
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
 #include <Iniparser.h>
+=======
+#include "callbacks.h"
+
+
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
 float lastX = 400, lastY = 300;
 bool firstMouse = true;
 Camera camera(glm::vec3(0.0f, 1.0f, 0.0f));
@@ -223,9 +227,6 @@ void ApplyCustomImGuiStyle()
 
 }
 
-
-
-
 int program() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -239,14 +240,18 @@ int program() {
     }
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "En este estado carga modelos.", NULL, NULL);
+<<<<<<< HEAD
    //GLFWwindow* window = glfwCreateWindow(1920, 1100, "tamaño de ventana para PC de alvaro.", NULL, NULL);
+=======
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-    
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
+<<<<<<< HEAD
     // Inicialización de FMOD
     FMOD::System* fmodSystem = nullptr;
     FMOD::Sound* backgroundSound = nullptr;
@@ -261,6 +266,8 @@ int program() {
     // Reproduce el sonido en loop
     fmodSystem->playSound(backgroundSound, nullptr, false, &channel);
     
+=======
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
     // Skybox setup
     unsigned int skyboxVAO, skyboxVBO;
     glGenVertexArrays(1, &skyboxVAO);
@@ -288,6 +295,7 @@ int program() {
     glEnable(GL_DEPTH_TEST);
 
     Shader shader("res/Shaders/shader.vs", "res/Shaders/shader.fg");
+<<<<<<< HEAD
     Model model("res/Models/Exhibition/FinalDesign.gltf");
     // Model model2("res/Models/vivr/survivalrio_unity_mat.fbx");
     float width = 7.0f;      // ancho total en X
@@ -321,6 +329,11 @@ int program() {
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
+=======
+    Model model("res/Models/Exhibition/scene.gltf");
+
+    Model model2("res/Models/viviente/survivalrio_unity_mat.fbx");
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
 
     float lastFrame = 0.0f;
     bool showInfo = false;
@@ -337,9 +350,7 @@ int program() {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        fmodSystem->update();
 
-        
         glDepthFunc(GL_LEQUAL);
         skyboxShader.use();
         glm::mat4 skyboxView = glm::mat4(glm::mat3(camera.GetViewMatrix()));
@@ -368,11 +379,12 @@ int program() {
 
 
 
-       
+
 
 
         shader.use();
 
+<<<<<<< HEAD
         glm::mat4 modelMat = glm::mat4(1.0f);
         modelMat = glm::translate(modelMat, glm::vec3(-2.60f, 0.0f, 0.0f)); 
         modelMat = glm::scale(modelMat, glm::vec3(0.1f));
@@ -441,6 +453,24 @@ int program() {
             ImGui::Text("Presiona Backspace para cerrar");
             ImGui::End();
         }
+=======
+
+        glm::mat4 modelMat2 = glm::mat4(1.0f);
+        modelMat2 = glm::translate(modelMat2, glm::vec3(5.0f, 0.0f, 0.0f));
+        shader.setMat4("model", modelMat2);
+        model2.Draw(shader, modelMat2);
+
+        glm::mat4 modelMat = glm::mat4(1.0f);
+        modelMat = glm::scale(modelMat, glm::vec3(0.1f));
+        modelMat = glm::rotate(modelMat, glm::radians(-90.0f), glm::vec3(1, 0, 0));
+
+        shader.setMat4("view", view);
+        shader.setMat4("projection", projection);
+
+        model.Draw(shader, modelMat);
+
+
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
 
 
         // Renderiza ImGui encima de la escena

@@ -39,4 +39,3 @@ unsigned int TextureFromFile(const char* path, const std::string& directory) {
 
     return textureID;
 }
-

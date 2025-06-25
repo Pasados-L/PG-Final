@@ -133,6 +133,7 @@
     <None Include="res\Shaders\shader.fg" />
     <None Include="res\Shaders\skybox.fs" />
     <None Include="res\Shaders\skybox.vs" />
+<<<<<<< HEAD
     <None Include="fmod.dll" />
     <None Include="fmodL.dll" />
     <None Include="fmodstudio.dll" />
@@ -140,6 +141,9 @@
     <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
     <None Include="button.vs" />
     <None Include="button.fs" />
+=======
+    <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Models\Exhibition\textures\Material.003_baseColor.png">

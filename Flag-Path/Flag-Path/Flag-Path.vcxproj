@@ -152,6 +152,7 @@
     <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClInclude Include="CollisionBox.h" />
     <ClInclude Include="imgui-1.91.9b\backends\imgui_impl_glfw.h" />
     <ClInclude Include="imgui-1.91.9b\backends\imgui_impl_opengl3.h" />
@@ -162,6 +163,9 @@
     <ClInclude Include="imgui-1.91.9b\imstb_textedit.h" />
     <ClInclude Include="imgui-1.91.9b\imstb_truetype.h" />
     <ClInclude Include="Iniparser.h" />
+=======
+    <ClInclude Include="src\callbacks.h" />
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Mesh.h" />
     <ClInclude Include="src\Model.h" />
