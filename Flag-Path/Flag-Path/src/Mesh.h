@@ -37,6 +37,8 @@ public:
 
     Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures, glm::mat4 transform);
     void Draw(Shader& shader, const glm::mat4& parentModelMatrix);
+    glm::vec3 aabbMin;
+    glm::vec3 aabbMax;
 
 private:
     unsigned int VBO, EBO;

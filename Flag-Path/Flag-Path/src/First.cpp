@@ -8,8 +8,9 @@
 #include <cstring>
 #include "Shader.h"
 #include "stb_easy_font.h"
+#include "callbacks.h"
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+
 void processInput(GLFWwindow* window);
 void drawTextModern(const char* text, float x, float y);
 void drawTextScaledCentered(const char* text, float centerX, float centerY, float scale);
@@ -85,7 +86,9 @@ void showCredits() {
         glColor3f(0.0f, 0.0f, 0.0f); // texto negro
 
         //nombres y tamaño ajustable
-        const char* names[] = { "             Cajina Jarquin Lisbeth Dayana  2023-0653U","                     Gaitan Largaespada Jesus Antonio 2023-0631U","                     Montiel Loaisiga Alvaro Francisco  2023-0708U","                 Sanchez Ramirez Elena Elizabeth  2023-0788U"};
+
+        const char* names[] = { "             Cajina Jarquin Lisbeth Dayana  2023-0653U","                   Gaitan Largaespada Jesus Antonio  2023-0631U","                     Montiel Loaisiga Alvaro Francisco  2023-0708U","                 Sanchez Ramirez Elena Elizabeth  2023-0788U" };
+
         float textScale = 2.5f;      // ← Cambia aquí el tamaño del texto
         float spacing = 50.0f;       // Espacio entre nombres
         float startY = 180.0f;       // Y inicial para el primer nombre

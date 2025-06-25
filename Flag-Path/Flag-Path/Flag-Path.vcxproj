@@ -104,7 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Dependencies\Include;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path;$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +122,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Dependencies\Include;$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,6 +134,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CollisionBox.cpp" />
+    <ClCompile Include="imgui-1.91.9b\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="imgui-1.91.9b\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui-1.91.9b\imgui.cpp" />
+    <ClCompile Include="imgui-1.91.9b\imgui_demo.cpp" />
+    <ClCompile Include="imgui-1.91.9b\imgui_draw.cpp" />
+    <ClCompile Include="imgui-1.91.9b\imgui_tables.cpp" />
+    <ClCompile Include="imgui-1.91.9b\imgui_widgets.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\First.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -143,6 +152,20 @@
     <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <ClInclude Include="CollisionBox.h" />
+    <ClInclude Include="imgui-1.91.9b\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="imgui-1.91.9b\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="imgui-1.91.9b\imconfig.h" />
+    <ClInclude Include="imgui-1.91.9b\imgui.h" />
+    <ClInclude Include="imgui-1.91.9b\imgui_internal.h" />
+    <ClInclude Include="imgui-1.91.9b\imstb_rectpack.h" />
+    <ClInclude Include="imgui-1.91.9b\imstb_textedit.h" />
+    <ClInclude Include="imgui-1.91.9b\imstb_truetype.h" />
+    <ClInclude Include="Iniparser.h" />
+=======
+    <ClInclude Include="src\callbacks.h" />
+>>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Mesh.h" />
     <ClInclude Include="src\Model.h" />
@@ -155,10 +178,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assimp-vc143-mtd.dll" />
+    <None Include="button.fs" />
+    <None Include="button.vs" />
     <None Include="fmod.dll" />
     <None Include="fmodL.dll" />
     <None Include="fmodstudio.dll" />
     <None Include="fmodstudioL.dll" />
+    <CopyFileToFolders Include="info.ini">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
     <None Include="res\Models\Exhibition\scene.bin" />
     <None Include="res\Models\Exhibition\scene.gltf" />
     <None Include="res\Models\vivr\survivalrio_unity_mat.fbx" />
