@@ -86,9 +86,13 @@ void showCredits() {
         glColor3f(0.0f, 0.0f, 0.0f); // texto negro
 
         //nombres y tamaño ajustable
+<<<<<<< HEAD
 
         const char* names[] = { "             Cajina Jarquin Lisbeth Dayana  2023-0653U","                   Gaitan Largaespada Jesus Antonio  2023-0631U","                     Montiel Loaisiga Alvaro Francisco  2023-0708U","                 Sanchez Ramirez Elena Elizabeth  2023-0788U" };
 
+=======
+        const char* names[] = { "             Cajina Jarquin Lisbeth Dayana  2023-0653U","                     Montiel Loaisiga Alvaro Francisco  2023-0708U","                 Sanchez Ramirez Elena Elizabeth  2023-0788U", "                 Gaitan Largaespada Jesus Antonio 2023-0631U" };
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
         float textScale = 2.5f;      // ← Cambia aquí el tamaño del texto
         float spacing = 50.0f;       // Espacio entre nombres
         float startY = 180.0f;       // Y inicial para el primer nombre

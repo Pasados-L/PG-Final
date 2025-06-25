@@ -15,7 +15,10 @@
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
 #include <Iniparser.h>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
 float lastX = 400, lastY = 300;
 bool firstMouse = true;
 Camera camera(glm::vec3(0.0f, 1.0f, 0.0f));
@@ -147,7 +150,11 @@ std::vector<std::string> banderaNombres = {
     "Costa Rica",
     "Nicaragua",
     "El Salvador",
+<<<<<<< HEAD
     "Honduraz"
+=======
+    "Honduras"
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
 };
 
 int getBanderaCercana(const glm::vec3& camPos, const std::vector<glm::vec3>& posiciones, float distancia = 1.5f) {
@@ -155,7 +162,10 @@ int getBanderaCercana(const glm::vec3& camPos, const std::vector<glm::vec3>& pos
         if (glm::distance(camPos, posiciones[i]) <= distancia)
             return i;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     return -1;
 }
 
@@ -190,6 +200,8 @@ void ApplyCustomImGuiStyle()
     style.GrabRounding = 4.0f;
     style.WindowBorderSize = 1.0f;
     style.FrameBorderSize = 1.0f;
+<<<<<<< HEAD
+=======
 
 
  
@@ -222,7 +234,43 @@ void ApplyCustomImGuiStyle()
     colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.15f, 0.20f, 0.30f, 1.00f);
 
 }
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
 
+
+ 
+
+    // Colores personalizados
+    auto& colors = style.Colors;
+    colors[ImGuiCol_WindowBg] = ImVec4(0.12f, 0.12f, 0.14f, 0.95f);
+    colors[ImGuiCol_Header] = ImVec4(0.20f, 0.45f, 0.70f, 0.8f);
+    colors[ImGuiCol_HeaderHovered] = ImVec4(0.25f, 0.55f, 0.85f, 0.9f);
+    colors[ImGuiCol_HeaderActive] = ImVec4(0.15f, 0.40f, 0.65f, 1.0f);
+    colors[ImGuiCol_Button] = ImVec4(0.20f, 0.50f, 0.90f, 1.00f);
+    colors[ImGuiCol_ButtonHovered] = ImVec4(0.25f, 0.60f, 0.95f, 1.00f);
+    colors[ImGuiCol_ButtonActive] = ImVec4(0.15f, 0.45f, 0.85f, 1.00f);
+    colors[ImGuiCol_FrameBg] = ImVec4(0.16f, 0.29f, 0.48f, 0.54f);
+    colors[ImGuiCol_FrameBgHovered] = ImVec4(0.26f, 0.40f, 0.60f, 0.54f);
+    colors[ImGuiCol_FrameBgActive] = ImVec4(0.12f, 0.30f, 0.50f, 0.67f);
+    colors[ImGuiCol_TitleBg] = ImVec4(0.04f, 0.04f, 0.08f, 1.00f);
+    colors[ImGuiCol_TitleBgActive] = ImVec4(0.10f, 0.10f, 0.20f, 1.00f);
+    colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.00f, 0.00f, 0.00f, 0.51f);
+    colors[ImGuiCol_SliderGrab] = ImVec4(0.20f, 0.50f, 0.90f, 1.00f);
+    colors[ImGuiCol_SliderGrabActive] = ImVec4(0.25f, 0.60f, 0.95f, 1.00f);
+    colors[ImGuiCol_CheckMark] = ImVec4(0.20f, 0.50f, 0.90f, 1.00f);
+    colors[ImGuiCol_Separator] = ImVec4(0.20f, 0.45f, 0.70f, 0.50f);
+    colors[ImGuiCol_SeparatorHovered] = ImVec4(0.25f, 0.55f, 0.85f, 0.78f);
+    colors[ImGuiCol_SeparatorActive] = ImVec4(0.15f, 0.40f, 0.65f, 1.00f);
+    colors[ImGuiCol_Tab] = ImVec4(0.15f, 0.28f, 0.45f, 0.86f);
+    colors[ImGuiCol_TabHovered] = ImVec4(0.18f, 0.30f, 0.50f, 0.80f);
+    colors[ImGuiCol_TabActive] = ImVec4(0.13f, 0.24f, 0.42f, 1.00f);
+    colors[ImGuiCol_TabUnfocused] = ImVec4(0.10f, 0.10f, 0.12f, 0.97f);
+    colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.15f, 0.20f, 0.30f, 1.00f);
+
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
 int program() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -236,6 +284,10 @@ int program() {
     }
 
     GLFWwindow* window = glfwCreateWindow(800, 600, "En este estado carga modelos.", NULL, NULL);
+<<<<<<< HEAD
+=======
+   //GLFWwindow* window = glfwCreateWindow(1920, 1100, "tamaño de ventana para PC de alvaro.", NULL, NULL);
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
@@ -243,7 +295,10 @@ int program() {
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     // Inicialización de FMOD
     FMOD::System* fmodSystem = nullptr;
     FMOD::Sound* backgroundSound = nullptr;
@@ -286,7 +341,10 @@ int program() {
     glEnable(GL_DEPTH_TEST);
 
     Shader shader("res/Shaders/shader.vs", "res/Shaders/shader.fg");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     Model model("res/Models/Exhibition/FinalDesign.gltf");
     // Model model2("res/Models/vivr/survivalrio_unity_mat.fbx");
     float width = 7.0f;      // ancho total en X
@@ -320,7 +378,10 @@ int program() {
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
 
     float lastFrame = 0.0f;
     bool showInfo = false;
@@ -442,7 +503,10 @@ int program() {
         }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
         // Renderiza ImGui encima de la escena
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

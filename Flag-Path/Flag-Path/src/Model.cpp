@@ -54,7 +54,10 @@ std::pair<glm::vec3, glm::vec3> Model::GetGlobalAABB() {
     }
     return { min, max };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
 
 void Model::loadModel(std::string path) {
     scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);

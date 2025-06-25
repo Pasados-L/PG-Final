@@ -33,6 +33,12 @@ public:
     bool hasBones = true; // Nueva bandera para huesos
 
     Model(const std::string& path);
+<<<<<<< HEAD
+=======
+    void Draw(Shader& shader, const glm::mat4& modelMatrix);
+    std::vector<std::pair<glm::vec3, glm::vec3>> GetAllAABBs() const;
+    std::pair<glm::vec3, glm::vec3> GetGlobalAABB();
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
 
     void Draw(Shader& shader, const glm::mat4& modelMatrix);
     std::vector<std::pair<glm::vec3, glm::vec3>> GetAllAABBs() const;

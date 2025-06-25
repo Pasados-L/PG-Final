@@ -38,4 +38,9 @@ unsigned int TextureFromFile(const char* path, const std::string& directory) {
     }
 
     return textureID;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552

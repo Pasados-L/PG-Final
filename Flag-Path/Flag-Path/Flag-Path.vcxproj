@@ -104,7 +104,11 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+<<<<<<< HEAD
       <AdditionalIncludeDirectories>C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Dependencies\Include;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path;$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Dependencies\Include;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Admin\Desktop\PruebaPG\Flag-Path\Flag-Path;$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -122,7 +126,11 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+<<<<<<< HEAD
       <AdditionalIncludeDirectories>C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Dependencies\Include;$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b\backends;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Flag-Path\imgui-1.91.9b;C:\Users\Cuenta Familiar\Desktop\PruebaPG\PruebaPG\Flag-Path\Dependencies\Include;$(SolutionDir)Dependencies\include;vendor;res;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     <ClInclude Include="CollisionBox.h" />
     <ClInclude Include="imgui-1.91.9b\backends\imgui_impl_glfw.h" />
     <ClInclude Include="imgui-1.91.9b\backends\imgui_impl_opengl3.h" />
@@ -163,9 +174,12 @@
     <ClInclude Include="imgui-1.91.9b\imstb_textedit.h" />
     <ClInclude Include="imgui-1.91.9b\imstb_truetype.h" />
     <ClInclude Include="Iniparser.h" />
+<<<<<<< HEAD
 =======
     <ClInclude Include="src\callbacks.h" />
 >>>>>>> 3dc8446ac58babba00609d1c0f004c000c3f641d
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Mesh.h" />
     <ClInclude Include="src\Model.h" />

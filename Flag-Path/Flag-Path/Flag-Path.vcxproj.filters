@@ -39,8 +39,11 @@
     <ClCompile Include="src\First.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
 
     <ClCompile Include="ejemplo.cpp">
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     <ClCompile Include="CollisionBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -135,7 +138,10 @@
     <None Include="res\Shaders\shader.fg" />
     <None Include="res\Shaders\skybox.fs" />
     <None Include="res\Shaders\skybox.vs" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c95cca9a5c699e979625d20fc2189c6d6d49552
     <None Include="fmod.dll" />
     <None Include="fmodL.dll" />
     <None Include="fmodstudio.dll" />
